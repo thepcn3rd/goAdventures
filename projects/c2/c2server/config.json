@@ -1,0 +1,7 @@
+{
+	"listeningPort": "8000",
+	"serverCert": "keys/server.crt",
+	"serverKey": "keys/server.key",
+	"dbLocation": "db/info.db",
+	"operatorRegistrationKey": "ODc0MjhmYzUyMjgwM2QzMTA2NWU3YmNlM2NmMDNmZTQ3NTA5NjYzMWU1ZTA3YmJkN2EwZmRlNjBjNGNmMjVjNyAgLQo="
+}

@@ -1,0 +1,84 @@
+{	
+	"outputQuantity": 5,
+	"originalFileOutput": "original.txt",
+	"fileOutput": "output.txt",
+	"creditCard": {
+		"visaBinNumber": 12345,
+		"display": "y",
+		"order": 1
+	},
+	"expDateCard": {
+		"display": "y",
+		"order": 2,
+		"minExpDateMonths": 1,
+		"maxExpDateMonths": 36
+	},
+	"cvvCard": {
+		"display": "y",
+		"order": 3
+	},
+	"atmPin": {
+		"display": "y",
+		"order": 4,
+		"lengthDigits": 4
+	},
+	"ssn": {
+		"display": "y",
+		"order": 5
+	},
+	"dob": {
+		"display": "y",
+		"order": 6,
+		"minAgeYears": 18,
+		"maxAgeYears": 102
+	},
+	"fullName": {
+		"display": "y",
+		"order": 7
+	},
+	"firstName": {
+		"display": "y",
+		"order": 8
+	},
+	"middleInitial": {
+		"display": "y",
+		"order": 9
+	},
+	"lastName": {
+		"display": "y",
+		"order": 10
+	},
+	"userName": {
+		"display": "y",
+		"firstname.lastname": "y",
+		"firstinitial.lastname": "n",
+		"firstname.lastinitial": "n",
+		"delimeter": ".",
+		"order": 11
+	},
+	"email": {
+		"display": "y",
+		"order": 12
+	},
+	"homePhone": {
+		"display": "y",
+		"order": 13
+	},
+	"cellPhone": {
+		"display": "y",
+		"order": 14
+	},
+	"workPhone": {
+		"display": "y",
+		"order": 15
+	},
+	"mothersMaidenName": {
+		"display": "y",
+		"order": 16
+	},
+	"password": {
+		"display": "y",
+		"order": 17,
+		"length": 9
+	}
+}
