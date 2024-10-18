@@ -1,0 +1,15 @@
+HTTP/1.1 302 Moved
+Set-Cookie: id=state_25549b0c5d27e52c996437e2c9f38eac; path=/; secure; HttpOnly
+Date: Sat, 03 Feb 2024 05:47:54 GMT
+location: /dana-na/auth/url_s4orlE8YGzcX3Txs/welcome.cgi?p=more%2Dcred
+Content-Type: text/html; charset=utf-8
+Connection: Keep-Alive
+Keep-Alive: timeout=15
+Pragma: no-cache
+Cache-Control: no-store
+Expires: -1
+X-XSS-Protection: 1
+Strict-Transport-Security: max-age=31536000
+accept-ch: Sec-CH-UA-Platform-Version
+content-length: 0
+
