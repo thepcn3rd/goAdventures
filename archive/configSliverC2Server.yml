@@ -1,0 +1,86 @@
+---
+- name: Configure sliverC2 server for  Assessment
+  hosts: sliverServer
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - set_fact:
+        hostname: silverandgold
+
+    - name: "Change the hostname to {{ hostname }}"
+      hostname:
+        name: "{{ hostname }}"
+
+    # Sometimes does not work...
+    - name: "apt Update packages"
+      apt:
+        update_cache: yes
+
+
+    - name: "Install Dependencies for qdpm"
+      apt:
+        pkg:
+          - curl
+          - unzip
+          - apt-transport-https
+          - ca-certificates
+          - software-properties-common
+    
+    - name: Create the Directory
+      file:
+        path: /home/thepcn3rd/binaries
+        state: directory
+        owner: thepcn3rd
+        group: thepcn3rd
+        mode: "0700"
+    
+    - name: Copy Sliver Server pre-compiled binary to sliverServer/server
+      ansible.builtin.copy:
+        src: "{{ ansibleDirectory }}/downloads/sliver-server_linux"
+        dest: /home/thepcn3rd/binaries/sliverServer
+        mode: '0700'
+    
+    - name: Create the Directory
+      file:
+        path: /home/thepcn3rd/msf
+        state: directory
+        owner: thepcn3rd
+        group: thepcn3rd
+        mode: "0700"
+    
+    # curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+    - name: Copy metasploit Install Script to the sliverServer
+      ansible.builtin.copy:
+        src: "{{ ansibleDirectory }}/downloads/msfinstall"
+        dest: /home/thepcn3rd/msf/msfinstall
+        owner: thepcn3rd
+        group: thepcn3rd
+        mode: '0700'
+
+    - name: Install the Metasploit
+      command: /home/thepcn3rd/msf/msfinstall
+      async: 600
+      poll: 15
+
+    - name: Create the Directory
+      file:
+        path: /home/thepcn3rd/sliverServer
+        state: directory
+        owner: thepcn3rd
+        group: thepcn3rd
+        mode: "0700"
+
+    # curl https://sliver.sh/install -o sliverc2.sh
+    - name: Copy Sliver Install Script to the sliverServer
+      ansible.builtin.copy:
+        src: "{{ ansibleDirectory }}/downloads/sliverc2.sh"
+        dest: /home/thepcn3rd/sliverServer/sliverc2.sh
+        owner: thepcn3rd
+        group: thepcn3rd
+        mode: '0700'
+
+    - name: Install the Sliver Server
+      command: /home/thepcn3rd/sliverServer/sliverc2.sh
+      async: 600
+      poll: 15

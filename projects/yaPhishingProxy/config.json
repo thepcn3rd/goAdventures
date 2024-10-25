@@ -1,0 +1,7 @@
+{
+	"listeningPort": "443",
+	"listeningURL": "example.4gr8.info",
+	"proxiedURL": "www.example.com",
+	"serverCert": "keys/server.crt",
+	"serverKey": "keys/server.key"
+}

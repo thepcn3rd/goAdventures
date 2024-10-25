@@ -1,0 +1,16 @@
+{
+	"server": {
+		"port": "53",
+		"primaryDNS": "8.8.8.8",
+		"primaryDNSPort": "53"
+	},
+	"proxy": {
+		"domains": [
+			"attacker1.com.",
+			"attacker2.com.",
+			"ads.attacker3.com."
+		],
+		"proxyServer": "127.0.0.1",
+		"proxyPort": "5353"
+	}
+}

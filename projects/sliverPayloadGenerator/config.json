@@ -1,0 +1,9 @@
+{
+	"sliverServer": "sliver.server.local",
+	"listenerPort" : "443",
+	"stageListenerPort" : "80",
+	"serverCRT": "keys/my.crt",
+	"serverKey": "keys/my.key",
+	"csharpFile": "mystuff.jpg",
+	"csharpTargetBinary": "notepad.exe"
+}
