@@ -93,6 +93,11 @@ This collection of golang programs is for educational use only.  As I read the b
 "go run cmd\prefetch.go parse CMD.EXE-5873E24B.pf"
 
 
+## License
+
+This project is licensed under the [MIT License](/LICENSE.md).
+
+
 
 
 
